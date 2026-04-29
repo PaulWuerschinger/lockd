@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Support — LOCKD</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  :root { --bg:#0b0b0d; --surface:#1a1a1d; --text:#f5f5f7; --muted:#9b9ba1; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",system-ui,sans-serif; line-height:1.6; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 64px 24px 96px; }
+  .back { color: var(--muted); text-decoration: none; font-size: 14px; }
+  h1 { font-size: 40px; letter-spacing: -0.02em; font-family: ui-rounded, "SF Pro Rounded", system-ui; margin: 16px 0 8px; }
+  h2 { font-size: 20px; margin: 36px 0 8px; }
+  details { background: var(--surface); padding: 14px 18px; border-radius: 10px; margin: 8px 0; cursor: pointer; }
+  details summary { font-weight: 600; }
+  details[open] summary { margin-bottom: 8px; }
+  p, li { color: #d6d6dc; }
+  a { color: #4da3ff; }
+  .cta { display:inline-block; background:#fff; color:#000; padding:14px 22px; border-radius:12px; font-weight:700; text-decoration:none; margin-top: 24px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="index.html">← LOCKD</a>
+
+<h1>Support</h1>
+<p>Schreib uns bei Problemen, Bugs oder Wünschen jederzeit eine E-Mail. Wir antworten meistens innerhalb von 24 Stunden.</p>
+
+<a class="cta" href="mailto:support@paulwuerschinger.com?subject=LOCKD%20Support">support@paulwuerschinger.com</a>
+
+<h2>Häufige Fragen</h2>
+
+<details>
+  <summary>Wie kündige ich mein Abo?</summary>
+  <p>iOS-Einstellungen → Apple-ID → Abos → LOCKD Pro → Kündigen. Apple verarbeitet die Kündigung sofort.</p>
+</details>
+
+<details>
+  <summary>Wie bekomme ich eine Rückerstattung?</summary>
+  <p>Rückerstattungen laufen ausschließlich über Apple: <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a></p>
+</details>
+
+<details>
+  <summary>Funktioniert die App offline?</summary>
+  <p>Ja, fast komplett. Trainings, Pläne, Stats, Wasser-Tracker — alles offline. Nur drei Funktionen brauchen Internet: KI-Foto-Scan, KI-Text-Schätzung, Lebensmitteldatenbank-Suche.</p>
+</details>
+
+<details>
+  <summary>Werden meine Trainingsdaten in die Cloud gesynct?</summary>
+  <p>Nein. Alle Trainings-, Plans- und Gewichtsdaten bleiben lokal auf deinem iPhone. Du kannst jederzeit ein vollständiges JSON-Backup über Settings → Backup machen.</p>
+</details>
+
+<details>
+  <summary>Was passiert mit meinem Foto wenn ich Essen scanne?</summary>
+  <p>Das komprimierte Foto (~100 KB JPEG) wird an Vercel AI Gateway → Anthropic Claude gesendet, dort analysiert, das Ergebnis kommt zurück. Anthropic speichert keine Trainingsdaten aus deinem Bild. Mehr Details: <a href="privacy-policy.html">Datenschutz</a>.</p>
+</details>
+
+<details>
+  <summary>Funktioniert Apple Health-Sync?</summary>
+  <p>Ja. Schritte und aktive Kalorien werden aus Health gelesen, beendete Workouts werden in Health geschrieben. Die Daten verlassen dein Gerät nicht.</p>
+</details>
+
+<details>
+  <summary>Was ist Focus Lock?</summary>
+  <p>Eine Pro-Funktion: während du trainierst, sperrt LOCKD ablenkende Apps (TikTok, Instagram, etc.). Sobald du das Workout beendest, sind die Apps wieder freigeschaltet. Du wählst selbst welche Apps blockiert werden.</p>
+</details>
+
+<details>
+  <summary>Was passiert wenn iCloud-Backup wiederhergestellt wird?</summary>
+  <p>Da unsere Daten in der App-Sandbox liegen, sind sie automatisch im iCloud-Backup enthalten. Beim Wiederherstellen sind alle Trainings + Plans wieder da. Empfehlung: regelmäßige JSON-Exports als Sicherheitsnetz.</p>
+</details>
+
+<details>
+  <summary>Welche Geräte werden unterstützt?</summary>
+  <p>iOS 17.0 und neuer. iPhone XS und neuer. iPad ab iOS 17.</p>
+</details>
+
+</div>
+</body>
+</html>
