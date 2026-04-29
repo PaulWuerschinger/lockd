@@ -1,69 +1,137 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOCKD - Privacy Policy</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif; background: #000; color: #fff; padding: 40px 20px; max-width: 720px; margin: 0 auto; line-height: 1.6; }
-        h1 { font-size: 28px; font-weight: 800; letter-spacing: 4px; margin-bottom: 8px; }
-        h2 { font-size: 18px; font-weight: 700; margin-top: 32px; margin-bottom: 12px; color: #fff; }
-        p, li { font-size: 15px; color: #aaa; margin-bottom: 12px; }
-        ul { padding-left: 20px; }
-        .date { font-size: 13px; color: #555; margin-bottom: 32px; }
-        a { color: #fff; }
-    </style>
+<meta charset="utf-8">
+<title>Datenschutzerklärung — LOCKD</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  :root { --bg:#0b0b0d; --surface:#1a1a1d; --text:#f5f5f7; --muted:#9b9ba1; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",system-ui,sans-serif; line-height:1.6; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 64px 24px 96px; }
+  .back { color: var(--muted); text-decoration: none; font-size: 14px; }
+  h1 { font-size: 40px; letter-spacing: -0.02em; font-family: ui-rounded, "SF Pro Rounded", system-ui; margin: 16px 0 8px; }
+  h2 { font-size: 22px; margin: 36px 0 12px; }
+  h3 { font-size: 17px; margin: 24px 0 8px; color: var(--muted); }
+  p, li { color: #d6d6dc; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+  th, td { padding: 10px 12px; border-bottom: 1px solid #2a2a2e; text-align: left; vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; }
+  code { background: var(--surface); padding: 2px 6px; border-radius: 4px; font-size: 13px; }
+  a { color: #4da3ff; }
+  hr { border: 0; border-top: 1px solid #2a2a2e; margin: 48px 0; }
+  .meta { color: var(--muted); font-size: 13px; }
+</style>
 </head>
 <body>
-    <h1>LOCKD</h1>
-    <p class="date">Privacy Policy — Last updated: March 13, 2026</p>
+<div class="wrap">
+<a class="back" href="index.html">← LOCKD</a>
 
-    <h2>Overview</h2>
-    <p>LOCKD is a gym workout tracker designed with privacy at its core. All your data stays on your device. We do not collect, store, or transmit any personal information to external servers.</p>
+<h1>Datenschutzerklärung</h1>
+<p class="meta"><strong>Gültig ab:</strong> 29. April 2026 · <strong>Anbieter:</strong> Paul Würschinger · Deutschland · <a href="mailto:support@paulwuerschinger.com">support@paulwuerschinger.com</a></p>
 
-    <h2>Data Storage</h2>
-    <p>All workout data, training plans, body measurements, achievements, and preferences are stored locally on your device using Apple's SwiftData framework. No cloud sync, no external databases, no accounts required.</p>
+<h2>1. Übersicht</h2>
+<p>LOCKD ist eine Fitness- und Ernährungs-Tracking-App. <strong>Nahezu alle deine Daten bleiben lokal auf deinem Gerät.</strong> Wir betreiben kein eigenes Backend, das Nutzerprofile speichert. Externe Anfragen finden ausschließlich für drei klar abgegrenzte Funktionen statt:</p>
+<ol>
+  <li><strong>KI-Essens-Erkennung</strong> (Foto-Scan + Text-Schätzung) → Anthropic Claude über Vercel AI Gateway</li>
+  <li><strong>Lebensmitteldatenbank-Suche</strong> → Open Food Facts (öffentliche, anonyme API)</li>
+  <li><strong>In-App-Käufe</strong> → Apple StoreKit (Apples Datenschutzbestimmungen)</li>
+</ol>
+<p>Apple Health-Daten verlassen niemals dein Gerät.</p>
 
-    <h2>Apple Health Integration</h2>
-    <p>LOCKD can optionally read and write data to Apple Health (HealthKit), including:</p>
-    <ul>
-        <li>Body weight measurements</li>
-        <li>Workout sessions (duration, estimated calories)</li>
-    </ul>
-    <p>This integration is entirely opt-in and requires your explicit permission. Health data is exchanged directly with Apple Health on your device and is never sent to any external service.</p>
+<h2>2. Welche Daten werden erfasst und wofür</h2>
+<h3>2.1 Lokal auf deinem Gerät (verlassen das Gerät NIE)</h3>
+<table>
+  <thead><tr><th>Daten</th><th>Zweck</th><th>Speicherort</th></tr></thead>
+  <tbody>
+    <tr><td>Workouts, Sätze, Wiederholungen, Gewichte</td><td>Trainingstracking</td><td>SwiftData (App-Sandbox)</td></tr>
+    <tr><td>Trainingspläne</td><td>Plan-Verwaltung</td><td>SwiftData</td></tr>
+    <tr><td>Körperdaten (Gewicht, Maße, BMI)</td><td>Fortschritt-Tracking</td><td>SwiftData</td></tr>
+    <tr><td>Kalorien-Einträge</td><td>Ernährungstagebuch</td><td>SwiftData</td></tr>
+    <tr><td>Wasser-Einträge</td><td>Wasser-Tracker</td><td>SwiftData</td></tr>
+    <tr><td>Apple Health-Daten</td><td>Anzeige im Dashboard, Health-Schreibung bei beendetem Workout</td><td>HealthKit (Apple-verschlüsselt)</td></tr>
+    <tr><td>App-Einstellungen</td><td>Personalisierung</td><td>UserDefaults</td></tr>
+    <tr><td>Focus Lock-Sessions</td><td>Ablenkungssperre während Training</td><td>App-Sandbox + Family Controls Framework</td></tr>
+  </tbody>
+</table>
 
-    <h2>Screen Time / Focus Lock</h2>
-    <p>LOCKD uses Apple's Screen Time API (FamilyControls, ManagedSettings) to optionally block distracting apps during your workout. This feature:</p>
-    <ul>
-        <li>Requires your explicit authorization</li>
-        <li>Only activates when you choose to enable Focus Lock</li>
-        <li>Does not collect, log, or transmit any information about which apps you use or block</li>
-        <li>All app selection tokens remain on-device</li>
-    </ul>
+<h3>2.2 Was an externe Server gesendet wird</h3>
 
-    <h2>Notifications</h2>
-    <p>LOCKD can send local push notifications as workout reminders. These are scheduled entirely on-device. No notification data is sent to any server.</p>
+<h3>a) KI-Essens-Erkennung (optional, nur bei Nutzung)</h3>
+<p>Wenn du Essen per <strong>Foto</strong> oder <strong>Text-Beschreibung</strong> loggst:</p>
+<ul>
+  <li>Das Foto (komprimiertes JPEG, ~100 KB) ODER deine Text-Eingabe wird an die <strong>Vercel AI Gateway</strong> API gesendet (<code>ai-gateway.vercel.sh</code>)</li>
+  <li>Vercel leitet die Anfrage an <strong>Anthropic Claude Haiku 4.5</strong> weiter</li>
+  <li>Anthropic verarbeitet die Anfrage und gibt eine Schätzung der Nährwerte zurück</li>
+  <li><strong>Gemäß Anthropic-Vereinbarung wird der Input NICHT zu Trainingsdaten gespeichert</strong></li>
+  <li>Vercel und Anthropic haben Zugriff auf den Input für die Dauer der Anfrage zur Bearbeitung</li>
+</ul>
+<p><strong>Du kannst diese Funktion einfach nicht nutzen</strong> — die App funktioniert ohne sie.</p>
 
-    <h2>Analytics & Tracking</h2>
-    <p>LOCKD does not use any analytics SDKs, tracking pixels, advertising identifiers, or third-party services. We do not track your behavior in any way.</p>
+<h3>b) Lebensmitteldatenbank-Suche</h3>
+<ul>
+  <li>Suchanfrage wird <strong>anonym</strong> an die öffentliche <a href="https://world.openfoodfacts.org">Open Food Facts API</a> gesendet</li>
+  <li>Es wird <strong>keine User-Kennung, keine IP-Verknüpfung, kein Account</strong> mitgesendet</li>
+</ul>
 
-    <h2>In-App Purchases</h2>
-    <p>LOCKD may offer optional in-app purchases processed entirely through Apple's App Store. We do not have access to your payment information.</p>
+<h3>c) In-App-Käufe</h3>
+<p>Subscriptions und der Lebenslang-Kauf werden über <strong>Apple StoreKit</strong> abgewickelt. Apple ist alleiniger Verantwortlicher für die Zahlungsdaten. Wir erhalten <strong>keinerlei Zahlungsdaten oder Apple-ID</strong>.</p>
 
-    <h2>Data Sharing</h2>
-    <p>We do not share, sell, or transfer any of your data to third parties. Period.</p>
+<h3>d) Crash- und Performance-Diagnostik (Apple-System)</h3>
+<p>Wenn du Apple Analytics in den iOS-Einstellungen aktiviert hast, übermittelt iOS automatisch anonymisierte Crash-Reports und Performance-Metriken (MetricKit) an Apple. Wir erhalten diese in aggregierter Form über Apple Developer App Store Connect.</p>
 
-    <h2>Data Deletion</h2>
-    <p>You can delete all your data at any time through the app's Settings. Uninstalling the app removes all locally stored data permanently.</p>
+<h2>3. Was wir NICHT tun</h2>
+<ul>
+  <li>Wir verkaufen keine Daten an Werbetreibende</li>
+  <li>Wir betreiben kein Tracking, keine Cookies, kein Fingerprinting</li>
+  <li>Wir haben keine Werbe-SDKs in der App</li>
+  <li>Wir haben keinen User-Account, keine Login-Pflicht, keine E-Mail-Sammlung</li>
+  <li>Wir nutzen kein App Tracking Transparency (ATT) — wir tracken nichts</li>
+  <li>Wir sammeln keine Geräte-IDs, IP-Adressen, Werbe-IDs</li>
+  <li>Apple Health-Daten gehen nirgendwo hin — sie bleiben in der HealthKit-Sandbox</li>
+</ul>
 
-    <h2>Children's Privacy</h2>
-    <p>LOCKD is not directed at children under 13. We do not knowingly collect data from children.</p>
+<h2>4. Deine Rechte (DSGVO)</h2>
+<table>
+  <thead><tr><th>Recht</th><th>Wie</th></tr></thead>
+  <tbody>
+    <tr><td>Auskunft</td><td>Settings → Backup → Vollständiges Backup (JSON)</td></tr>
+    <tr><td>Löschung</td><td>Settings → Account & Daten → Account löschen</td></tr>
+    <tr><td>Berichtigung</td><td>Direkt in der App — alle Einträge sind editierbar</td></tr>
+    <tr><td>Datenübertragbarkeit</td><td>JSON-Export</td></tr>
+    <tr><td>Widerspruch / Einschränkung</td><td>Funktionen einfach nicht nutzen</td></tr>
+  </tbody>
+</table>
+<p>Für externe Verarbeitungen wende dich an die jeweiligen Anbieter:
+<a href="https://www.anthropic.com/legal">Anthropic</a> ·
+<a href="https://vercel.com/legal/privacy-policy">Vercel</a> ·
+<a href="https://world.openfoodfacts.org/privacy">Open Food Facts</a> ·
+<a href="https://www.apple.com/legal/privacy/">Apple</a></p>
 
-    <h2>Changes</h2>
-    <p>If we update this policy, the changes will be reflected on this page with an updated date.</p>
+<h2>5. Aufbewahrung und Löschung</h2>
+<ul>
+  <li><strong>Lokale Daten:</strong> Bleiben so lange auf dem Gerät, wie die App installiert ist.</li>
+  <li><strong>Externe Anfragen:</strong> Anthropic und Vercel speichern Requests gemäß ihrer Retention-Policies.</li>
+</ul>
 
-    <h2>Contact</h2>
-    <p>Questions about this privacy policy? Reach out at <a href="mailto:paulwuerschinger@icloud.com">paulwuerschinger@icloud.com</a></p>
+<h2>6. Sicherheit</h2>
+<ul>
+  <li>App-Daten in der iOS-App-Sandbox, vom Betriebssystem isoliert</li>
+  <li>Apple Health-Daten in HealthKit, hardwarebasiert verschlüsselt</li>
+  <li>Externe API-Aufrufe nutzen ausschließlich HTTPS / TLS 1.3</li>
+</ul>
+
+<h2>7. Kinder</h2>
+<p>LOCKD ist nicht für Kinder unter 13 Jahren konzipiert. Apple Family Controls werden nur für die App-Sperr-Funktion während Workouts verwendet.</p>
+
+<h2>8. Änderungen</h2>
+<p>Aktualisierungen dieser Datenschutzerklärung werden über App-Updates und unter dieser URL veröffentlicht.</p>
+
+<h2>9. Verantwortlicher</h2>
+<p>Paul Würschinger · Deutschland · <a href="mailto:support@paulwuerschinger.com">support@paulwuerschinger.com</a></p>
+
+<hr>
+<p class="meta">Stand: 29. April 2026</p>
+</div>
 </body>
 </html>
