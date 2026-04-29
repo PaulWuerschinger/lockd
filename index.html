@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>LOCKD — Gym & Workout Tracker</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  :root {
+    --bg: #0b0b0d;
+    --surface: #1a1a1d;
+    --text: #f5f5f7;
+    --muted: #9b9ba1;
+    --accent: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", system-ui, sans-serif;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 64px 24px; }
+  h1 {
+    font-size: 56px; font-weight: 800; letter-spacing: -0.03em; margin: 0 0 8px;
+    font-family: ui-rounded, "SF Pro Rounded", -apple-system, sans-serif;
+  }
+  .lede { color: var(--muted); font-size: 18px; margin: 0 0 48px; }
+  .links {
+    display: grid; gap: 12px; margin-top: 32px;
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 480px) { .links { grid-template-columns: 1fr; } }
+  .links a {
+    display: block; padding: 16px 18px;
+    background: var(--surface);
+    color: var(--text); text-decoration: none;
+    border-radius: 12px;
+    border: 1px solid #2a2a2e;
+    transition: transform 0.12s ease, border-color 0.12s ease;
+  }
+  .links a:hover { transform: translateY(-1px); border-color: #444; }
+  .links a small { display: block; color: var(--muted); margin-top: 4px; font-size: 13px; }
+  footer { margin-top: 64px; color: var(--muted); font-size: 13px; }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>LOCKD</h1>
+  <p class="lede">Gym & Workout Tracker — iOS app for training, plans, and AI-powered nutrition tracking.</p>
+
+  <div class="links">
+    <a href="privacy-policy.html">
+      <strong>Privacy Policy</strong>
+      <small>How we handle your data (GDPR-compliant)</small>
+    </a>
+    <a href="terms-of-service.html">
+      <strong>Terms of Service</strong>
+      <small>Pricing, auto-renewal, liability</small>
+    </a>
+    <a href="support.html">
+      <strong>Support</strong>
+      <small>Help, FAQ, contact</small>
+    </a>
+    <a href="https://apps.apple.com/app/id6760561118">
+      <strong>App Store</strong>
+      <small>Download LOCKD</small>
+    </a>
+  </div>
+
+  <footer>
+    © 2026 Paul Würschinger ·
+    <a href="mailto:support@paulwuerschinger.com">support@paulwuerschinger.com</a>
+  </footer>
+</div>
+</body>
+</html>
